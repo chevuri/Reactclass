@@ -1,7 +1,7 @@
 import React from 'react'
 import Wedding from './Greetings'
 
-const wedCards = [
+/*const wedCards = [
   {
     cardName: "Mr & Mr's",
     cardPrice: 15,
@@ -22,7 +22,7 @@ const wedCards = [
     cardPrice: 10,
     cardImage:"https://garlanna.com/wp-content/uploads/2017/09/G2337-Engaged-card-600x600.jpg"
   },
-]
+]*/
 
 
 class Greetings extends React.Component {
@@ -30,13 +30,16 @@ class Greetings extends React.Component {
     return(
       <div className="wedCards">
             {
-              wedCards.map(function(eachWedding){
-                  return <Wedding cardName={eachWedding.cardtName} cardPrice={eachWedding.cardPrice} cardImage={eachWedding.cardImage}/>
+              this.props.wedCards.map(function(eachWedding){
+                  return <Wedding key={eachWedding.id} cardName={eachWedding.cardtName} cardPrice={eachWedding.cardPrice} cardImage={eachWedding.cardImage}/>
               })
             }
       </div>
     )
   }
+  // componentWillReceiveProps(nextProps){
+  //   console.log("this are the new props", nextProps)
+  // }
 }
 
 export default Greetings
