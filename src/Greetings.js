@@ -44,10 +44,6 @@ Wedding.defaultProps= {
 //           <Wedding cardName={"Got enaged card"} cardPrice={15} cardImage={"https://garlanna.com/wp-content/uploads/2017/09/G2337-Engaged-card-600x600.jpg"}/>
 //           <Wedding/>
 //         </div>
-
-
-//     );
-//   }
-
-// }
+//     )
+//   }}
 export default Wedding
