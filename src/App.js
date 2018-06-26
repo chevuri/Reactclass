@@ -4,18 +4,12 @@ import './App.css';
 import SearchBar from './searchbar';
 import Greetings from './List'
 
-
-
-
-
 class App extends React.Component{
   constructor(){
     super()
     this.state = {
         dynamicWedcards:[] //state setup
-    };
-  }
-
+    }}
   render(){
     return(
       <div className='App'>
@@ -27,7 +21,7 @@ class App extends React.Component{
      )
   }
  componentDidMount(){
-    let self=this; //declare 
+    let self=this; //declare self
     fetch('https://api.myjson.com/bins/c2jae')
     .then(function(response){  //
       console.log("this is the API data", response)
