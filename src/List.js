@@ -1,7 +1,7 @@
 import React from 'react'
 import Wedding from './Greetings'
 
-/*const wedCards = [
+/*const wedCards = [ // upload JSON object in myson for fake API//
   {
     cardName: "Mr & Mr's",
     cardPrice: 15,
@@ -37,9 +37,6 @@ class Greetings extends React.Component {
       </div>
     )
   }
-  // componentWillReceiveProps(nextProps){
-  //   console.log("this are the new props", nextProps)
-  // }
 }
 
 export default Greetings
