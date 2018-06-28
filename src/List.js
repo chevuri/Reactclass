@@ -24,19 +24,30 @@ import Wedding from './Greetings'
   },
 ]*/
 
-
-class Greetings extends React.Component {
-  render(){
+const Greetings = (props) =>{
     return(
       <div className="wedCards">
             {
-              this.props.wedCards.map(function(eachWedding){
-                  return <Wedding key={eachWedding.id} cardName={eachWedding.cardtName} cardPrice={eachWedding.cardPrice} cardImage={eachWedding.cardImage}/>
+              props.wedCards.map(function(eachWedding){
+                  return <Wedding key={eachWedding.id} cardName={eachWedding.cardName} cardPrice={eachWedding.cardPrice} cardImage={eachWedding.cardImage}/>
               })
             }
       </div>
     )
   }
-}
-
 export default Greetings
+
+// class Greetings extends React.Component {
+//   render(){
+//     return(
+//       <div className="wedCards">                                              //second assignment 
+//             {
+//               this.props.wedCards.map(function(eachWedding){
+//                   return <Wedding key={eachWedding.id} cardName={eachWedding.cardName} cardPrice={eachWedding.cardPrice} cardImage={eachWedding.cardImage}/>
+//               })
+//             }
+//       </div>
+//     )
+//   }
+// }
+// export default Greetings

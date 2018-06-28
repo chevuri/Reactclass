@@ -23,7 +23,7 @@ class App extends React.Component{
  componentDidMount(){
     let self=this; //declare self
     fetch('https://api.myjson.com/bins/c2jae')
-    .then(function(response){  //
+      .then(function(response){  //
       console.log("this is the API data", response)
     return response.json()
    })

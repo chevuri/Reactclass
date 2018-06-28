@@ -6,10 +6,9 @@ import PropTypes from 'prop-types'
 class Wedding extends React.Component {
   render(){
     return(
-
       <div className="wedCard">
             <div className="card-image">
-                <img src={this.props.cardImage}/>
+                <img src={this.props.cardImage} alt=""/>
             </div>
             <h4 className="card-name">{this.props.cardName}</h4>
             <h4 className="card-price">$ {this.props.cardPrice}</h4>
@@ -21,18 +20,16 @@ class Wedding extends React.Component {
     )
   }
 }
-
 Wedding.propTypes= {
-  cardName:PropTypes.string.isRequired,
+  cardName:PropTypes.string,
   cardPrice:PropTypes.number,
   cardImage:PropTypes.string
 }
 
 Wedding.defaultProps= {
-  cardPrice:0,
+  cardPrice:7,
   cardImage:"https://www.siasat.com/wp-content/uploads/2017/11/missing.jpg"
 }
-
 // class Greetings extends React.Component{
 //   render(){
 //     return(
