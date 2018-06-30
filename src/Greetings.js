@@ -12,18 +12,24 @@ class Wedding extends React.Component {
             </div>
             <h4 className="card-name">{this.props.cardName}</h4>
             <h4 className="card-price">$ {this.props.cardPrice}</h4>
-            <div className="addCart">
-              <button className="added" type="button"> Add to Cart </button>
-              <button className="added" type="button"> Buy Now </button>
-            </div>
-      </div>
+            {
+                this.props.isAddedToCart ?
+                <div className="addCart">
+                <button onClick={()=>{ this.props.handleRemoveCartInWedding(this.props.cardId) }}className="delete" type="button"> Remove </button>
+                </div>:
+                <div className="addCart">
+                <button onClick={()=>{ this.props.handleAddToCartInWedding(this.props.cardId) }}className="added" type="button"> Add to Cart </button>
+                </div>
+            }         
+     </div>
     )
   }
 }
 Wedding.propTypes= {
   cardName:PropTypes.string,
   cardPrice:PropTypes.number,
-  cardImage:PropTypes.string
+  cardImage:PropTypes.string,
+  cardId:PropTypes.number,
 }
 
 Wedding.defaultProps= {

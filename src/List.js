@@ -23,13 +23,20 @@ import Wedding from './Greetings'
     cardImage:"https://garlanna.com/wp-content/uploads/2017/09/G2337-Engaged-card-600x600.jpg"
   },
 ]*/
-
 const Greetings = (props) =>{
     return(
       <div className="wedCards">
             {
               props.wedCards.map(function(eachWedding){
-                  return <Wedding key={eachWedding.id} cardName={eachWedding.cardName} cardPrice={eachWedding.cardPrice} cardImage={eachWedding.cardImage}/>
+                  return <Wedding 
+                                handleAddToCartInWedding={(wedCard)=>props.handleAddToCartInGreetings(wedCard)}
+                                handleRemoveCartInWedding={(wedCard)=>props.handleRemoveFromCartInGreetings(wedCard)}
+                                key={eachWedding.id} 
+                                cardName={eachWedding.cardName} 
+                                cardPrice={eachWedding.cardPrice} 
+                                cardImage={eachWedding.cardImage}
+                                cardId={eachWedding.id}
+                                isAddedToCart={props.cart.indexOf(eachWedding.id) >= 0}/>
               })
             }
       </div>
