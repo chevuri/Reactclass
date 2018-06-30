@@ -9,7 +9,8 @@ class App extends React.Component{
     super()
     this.state = {
         dynamicWedcards:[] //state setup
-    }}
+    }
+  }
   render(){
     return(
       <div className='App'>

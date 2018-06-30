@@ -13,8 +13,8 @@ class Wedding extends React.Component {
             <h4 className="card-name">{this.props.cardName}</h4>
             <h4 className="card-price">$ {this.props.cardPrice}</h4>
             <div className="addCart">
-                <button className="added" type="button"> Add to Cart </button>
-                <button className="added" type="button"> Buy Now </button>
+              <button className="added" type="button"> Add to Cart </button>
+              <button className="added" type="button"> Buy Now </button>
             </div>
       </div>
     )
